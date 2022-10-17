@@ -1,0 +1,79 @@
+#hamburger {
+  width: auto;
+  height: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+  .ham {
+    margin-top: 35px;
+    position: absolute;
+    padding-right: 15px;
+  }
+  ul {
+    list-style-type: none;
+    margin-left: 0px;
+    padding: 0%;
+  }
+  ul li {
+    width: 90%;
+    height: 15px;
+    background-color: #8ABD24;
+    padding: 13px;
+  }
+  ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  ul :hover {
+    background-color: white;
+  }
+  ul :hover a {
+    color: #8ABD24;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .ham {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    display: block;
+    padding: 30px 0px;
+  }
+  ul li {
+    width: auto;
+    height: 35px;
+    background-color: #8ABD24;
+    padding: 13px;
+    display: inline;
+  }
+  ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+  }
+  ul :hover {
+    background-color: white;
+  }
+  ul :hover a {
+    color: #8ABD24;
+  }
+}
+main {
+  margin: auto;
+  width: 570px;
+  display: block;
+  text-align: justify;
+}
+
+footer {
+  background-color: #8ABD24;
+  width: 100%;
+  min-height: 15px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}/*# sourceMappingURL=oprava_style.css.map */

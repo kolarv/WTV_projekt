@@ -1,0 +1,46 @@
+@import "funkce";
+@import "promene";
+
+
+#hamburger{
+    width: auto;
+    height: 2em;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .ham{
+        @include ham;
+    }
+
+    ul{
+        @include menu;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .ham{
+        @include ham_web;
+    }
+
+    ul{
+        @include menu_web;
+    }
+}
+
+main{
+    margin: auto;
+    width: 570px;
+    display: block;
+    text-align: justify;
+}
+
+footer{
+    background-color: $barvicka;
+    width: 100%;
+    min-height: 15px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
