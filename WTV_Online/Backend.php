@@ -40,10 +40,13 @@ function postQuestion($question){
             die(mysqli_connect_error());  
     } 
     $date = date("Y-m-d");
+    $question = filter_var($question , FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH); 
+    if(!empty($question)){
     $sql = "INSERT INTO `questions` (`Question`, `Date`, `Author`, `Upvotes`) VALUES ('$question','$date','Anonym',0)";
     $query = mysqli_query($conn,$sql);
     if(!$query){
         echo "chyba vkládání dotazu";
+    }
     }
 }
 
@@ -53,10 +56,13 @@ function postAnsw($answ,$QID){
             die(mysqli_connect_error());  
     } 
     $date = date("Y-m-d");
+    $answ = filter_var($answ , FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH); 
+    if(!empty($answ)){
     $sql = "INSERT INTO `answer` (`QID`, `Text`, `Author`,`Upvotes`, `Date`) VALUES ('$QID','$answ','Anonym',0,'$date')";
     $query = mysqli_query($conn,$sql);
     if(!$query){
         echo "chyba vkládání dotazu";
+    }
     }
 }
 
