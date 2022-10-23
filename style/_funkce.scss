@@ -1,7 +1,7 @@
 @mixin ham {
+        position:relative;
+        float: right;
         margin-top: 35px;
-        position: absolute;
-        padding-right: 15px;
 }
 
 @mixin ham_web {
@@ -23,12 +23,16 @@
             a{
                 text-decoration: none;
                 color: white;
-            }  
+            } 
+            
+            h1{
+                text-align:left;
+            }
         }
     :hover{
         background-color: white;
         a{
-            color: $barvicka;
+           color: $barvicka;
         }
     }
 }

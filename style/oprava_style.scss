@@ -16,6 +16,15 @@
     ul{
         @include menu;
     }
+
+    .uloff{
+        @include menu;
+        display: none;
+    }
+
+    main{
+        max-width: 90vw;
+    }
 }
 
 
@@ -27,20 +36,92 @@
     ul{
         @include menu_web;
     }
+
+    
+    
+    .left-conteiner{
+        box-sizing: border-box;  /* <------- required */
+        width: 50%;  /* <------------------- required */
+        float: left;  /* <------------------ required */
+    
+    }
+
+    .rigth-conteiner{
+        overflow: hidden;
+    }
 }
 
 main{
     margin: auto;
-    width: 570px;
+    width: 635px;
     display: block;
     text-align: justify;
+    padding-bottom: 15px;
 }
 
 footer{
     background-color: $barvicka;
     width: 100%;
     min-height: 15px;
-    position: fixed;
+    position:fixed;
     left: 0;
-    bottom: 0;
+    margin-bottom: 0 auto;
 }
+
+body{
+    h1{
+        text-align: center;
+        color: $barvicka;
+    }
+}
+.window{
+        width: 250px;
+        height: 250px;
+        background-image: url("/img/kl.webp");
+        background-size: cover;
+        background-image: no-repeat;
+        background-position: center center;
+        text-align: center;
+        margin: auto;
+
+        .obr{
+            background-color: #8abd248e;
+            width: 250px;
+            height: 250px;
+            transition: height 4s;
+        }
+
+        
+        .nadpis{
+            color: rgb(255, 255, 255);
+            width: 250px;
+            height: 15px;
+            margin-bottom: 15px;
+            padding-top: 50px;
+            transition: height 4s;  
+        }
+
+        .obr:hover{   
+            height: 15px;
+            .nadpis{
+                width: 250px;
+                height: 100px;
+                float: inline-start;
+                background-color: $barvicka;
+            }
+            .popis{
+                display: none;
+            }
+         
+        }
+        
+        
+
+        .popis{
+            color: white;
+        }
+
+    }
+ 
+
+
